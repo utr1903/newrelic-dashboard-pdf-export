@@ -29,6 +29,7 @@ if [[ $flagDestroy != "true" ]]; then
     -var NEW_RELIC_ACCOUNT_ID=$NEWRELIC_ACCOUNT_ID \
     -var NEW_RELIC_API_KEY=$NEWRELIC_API_KEY \
     -var NEW_RELIC_REGION=$NEWRELIC_REGION \
+    -var NEW_RELIC_LICENSE_KEY=$NEWRELIC_LICENSE_KEY \
     -out "./tfplan"
 
   # Apply Terraform
@@ -41,5 +42,6 @@ else
   terraform -chdir=../terraform destroy \
     -var NEW_RELIC_ACCOUNT_ID=$NEWRELIC_ACCOUNT_ID \
     -var NEW_RELIC_API_KEY=$NEWRELIC_API_KEY \
-    -var NEW_RELIC_REGION=$NEWRELIC_REGION
+    -var NEW_RELIC_REGION=$NEWRELIC_REGION \
+    -var NEW_RELIC_LICENSE_KEY=$NEWRELIC_LICENSE_KEY
 fi
