@@ -31,7 +31,7 @@ resource "newrelic_synthetics_secure_credential" "license_key" {
 # Script to create custom events with dashboard page URL
 resource "newrelic_synthetics_script_monitor" "monitor" {
   status           = "ENABLED"
-  name             = "my-pdf-exporter-script"
+  name             = "my-snapshot-exporter-script"
   type             = "SCRIPT_API"
   locations_public = ["AWS_EU_CENTRAL_1", "AWS_US_WEST_1"]
   period           = "EVERY_DAY"
